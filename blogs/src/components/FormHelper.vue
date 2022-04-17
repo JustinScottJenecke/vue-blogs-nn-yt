@@ -1,7 +1,8 @@
 <template>
     <div id="form-helper">
 
-        <h1>Please fill out our form...</h1>
+        <h1>Form</h1>
+        <h2>Please fill out our form...</h2>
         <form action="" id="form-helper-form">
             <div id="form-header">
                 <slot name="form-header"/> <!--slot-->
