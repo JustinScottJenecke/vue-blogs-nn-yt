@@ -1,8 +1,10 @@
 <template>
-    <div id="form-helper">
+    <div>
 
         <h1>Form</h1>
+
         <h2>Please fill out our form...</h2>
+        
         <form action="" id="form-helper-form">
             <div id="form-header">
                 <slot name="form-header"/> <!--slot-->
@@ -52,11 +54,6 @@
 
 <style scoped>
 
-    #form-helper-form {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-    }
 
     #form-fields ul {
         display: flex;

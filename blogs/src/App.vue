@@ -1,8 +1,12 @@
 <template>
   <main id="app">
 
-    <form-one/>
-    <form-two/>
+    <div>
+      <button v-on:click="loadFormOne">Form One</button>
+      <button v-on:click="loadFormTwo">Form Two</button>
+    </div>
+
+    <component v-bind:is="activeComponent"></component>
 
   </main>
 </template>
@@ -31,13 +35,21 @@
         text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. \n'
           + 'Rerum, eos dignissimos! Eligendi nostrum id cupiditate veniam dolor, \n '
           + 'mollitia hic libero repudiandae harum aliquid quos doloremque \n'
-          + 'quas, sunt nisi quam totam.'
+          + 'quas, sunt nisi quam totam.',
+
+        activeComponent : 'form-one'
       }
     },
 
     // methods
     methods : {
-
+      
+      loadFormOne() {
+        this.activeComponent = 'form-one'
+      },
+      loadFormTwo() {
+        this.activeComponent = 'form-two'
+      }
     }
 
   }
