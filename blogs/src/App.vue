@@ -6,7 +6,10 @@
       <button v-on:click="loadFormTwo">Form Two</button>
     </div>
 
-    <component v-bind:is="activeComponent"></component>
+    <!-- Keeps data alive in inactive component (state) -->
+    <keep-alive>
+      <component v-bind:is="activeComponent"></component>
+    <keep-alive/>
 
   </main>
 </template>
